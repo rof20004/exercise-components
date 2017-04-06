@@ -1,23 +1,28 @@
 <template>
     <div class="container">
-        <header-component></header-component>
+        <app-header></app-header>
         <hr>
-        <server-component></server-component>
+        <div class="row">
+            <app-servers></app-servers>
+            <app-server-details></app-server-details>
+        </div>
         <hr>
-        <footer-component></footer-component>
+        <app-footer></app-footer>
     </div>
 </template>
 
 <script>
-    import Header from './Header.vue'
-    import Server from './Server.vue'
-    import Footer from './Footer.vue'
+    import Header from './Header.vue';
+    import Footer from './Footer.vue';
+    import Servers from './Servers.vue';
+    import ServerDetails from './ServerDetails.vue';
 
     export default {
         components: {
-            'header-component': Header,
-            'server-component': Server,
-            'footer-component': Footer
+            'app-header': Header,
+            'app-servers': Servers,
+            'app-server-details': ServerDetails,
+            'app-footer': Footer
         }
     }
 </script>
